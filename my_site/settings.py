@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f)2*z-3o68*1n3l_bhzou)jk$*w3v!yw(@(=woroxvi^t2eu2#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv("IS_PRODUCTION",True) 
+DEBUG = True
+
 
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['django-blog-prj.herokuapp.com','127.0.0.1']
@@ -75,17 +76,22 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {
+  #  'default': {
+   #     'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'postgres',
+     #   'USER':'sound',
+      #  'PASSWORD':'soundarya',
+       # 'HOST':'database-1.cprfkvqia53h.us-east-2.rds.amazonaws.com',
+ #       'PORT':'5432'
+#    }
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER':'sound',
-        'PASSWORD':'soundarya',
-        'HOST':'database-1.cprfkvqia53h.us-east-2.rds.amazonaws.com',
-        'PORT':'5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
