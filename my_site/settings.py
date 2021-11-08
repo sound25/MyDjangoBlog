@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f)2*z-3o68*1n3l_bhzou)jk$*w3v!yw(@(=woroxvi^t2eu2#
 DEBUG = getenv("IS_PRODUCTION",True) 
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = [getenv("APP_HOST","localost")]
+ALLOWED_HOSTS = ['django-blog-prj.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
