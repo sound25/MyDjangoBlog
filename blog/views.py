@@ -92,7 +92,7 @@ class ReadLaterView(View):
         else:
            stored_posts.remove(post_id) 
            request.session["stored_posts"]=stored_posts
-        return HttpResponseRedirect("/blog")
+        return HttpResponseRedirect("/")
 
 
 '''
